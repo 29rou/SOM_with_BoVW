@@ -22,7 +22,7 @@ void normalize(imgdatas &imgd){
 			allvec.push_back(imgd.at(i).descriptor.row(j));
 		}
 	}
-	Mat_<int> labels(allvec.rows, 1, CV_32F);        // 各サンプル点が割り当てられたクラスタのラベル
+	Mat_<int> labels(allvec.rows, 1, CV_32F);        
 	Mat_<float> centroids(F, allvec.cols);
 	std::cout << "Start Kmeans" << std::endl;
 	kmeans(allvec, F, labels, cvTermCriteria(CV_TERMCRIT_EPS + CV_TERMCRIT_ITER, 10, 1.0), 1, KMEANS_PP_CENTERS, centroids);
