@@ -17,7 +17,7 @@ void imgdata::loadimg(const std::string & filepath)
 	std::vector<Mat> chn;
 	split(src_img, chn);
 	Mat_<float> tmpdescriptor;
-	const int step = 10; // 10 pixels spacing between kp's
+	const int step = 10; 
 	std::vector<KeyPoint> keypoint;
 	for (int i = step; i<src_img.rows - step; i += step){
 		for (int j = step; j<src_img.cols - step; j += step){
